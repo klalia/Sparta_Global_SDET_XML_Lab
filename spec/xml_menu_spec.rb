@@ -13,7 +13,9 @@ describe "XML menu" do
   end
 
   it "should have no item with calories over 1000 except for the full breakfast" do
-    expect(@xml_menu.get_calories[-1]).to be < 1000
+    @xml_menu.get_calories.each do |calories|
+      expect(calories).to be < 1000 
+    end
   end
 
   it "should have all waffle dishes stating you get two waffles" do

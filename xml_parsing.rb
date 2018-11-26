@@ -17,9 +17,13 @@ class GuiseppesMenu
     arr = []
     array = @menu.search('calories').to_a
     array.each do |calories|
+      if calories.text.to_i < 1000
         arr << calories.text.to_i
+      else
+        arr
       end
-      arr
+      end
+    arr
   end
 
 end

@@ -14,10 +14,11 @@ class GuiseppesMenu
   end
 
   def get_calories
-    array = @menu.search('calories')
-    array.each do |cal|
-      cal.text.to_i
-    end
+    @menu.search('calories')[0].text.to_i
+    @menu.search('calories')[1].text.to_i
+    @menu.search('calories')[2].text.to_i
+    @menu.search('calories')[3].text.to_i
+    @menu.search('calories')[4].text.to_i
   end
 
 end

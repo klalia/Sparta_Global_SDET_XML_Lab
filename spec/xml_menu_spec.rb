@@ -20,8 +20,7 @@ describe "XML menu" do
   end
 
   it "should have all waffle dishes stating you get two waffles" do
-    # Consider children element methods - Remember to step through the data and print out to the command line if you need it
-    pending
+    expect(@xml_menu.get_waffles).to be 'you get two waffles'
   end
 
 end

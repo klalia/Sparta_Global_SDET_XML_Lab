@@ -26,22 +26,4 @@ class GuiseppesMenu
     arr
   end
 
-  def get_xpath_names
-  arr2=[]
-  a = @menu.xpath('//name').to_a
-  a.each do |waffles|
-    if waffles.text === Waffles
-      arr2 << waffles.text
-      puts 'you get two waffles'
-    else
-      arr2
-    end
-  end
-  arr
-  end
-
 end
-
-guiseppes = GuiseppesMenu.new
-
-puts guiseppes.get_xpath_names
